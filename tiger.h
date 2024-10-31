@@ -5,16 +5,18 @@
 
 class Tiger : public Animal {
    private:
-    /* data */
+    static int totalTigers;
+    std::string name;
+
    public:
-    Tiger(/* args */);
-    ~Tiger();
+    Tiger() { totalTigers++; };
+    ~Tiger() { totalTigers--; };
+    virtual Tiger* clone() const = 0;
+    virtual void setName(std::string newName) = 0;
+    static int getCount() { return totalTigers; };
+
+    // friend insertion operator
+    friend std::ostream& operator<<(std::ostream& out, const Tiger& a);
 };
-
-Tiger::Tiger(/* args */) {
-}
-
-Tiger::~Tiger() {
-}
 
 #endif

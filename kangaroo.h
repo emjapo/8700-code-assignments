@@ -5,16 +5,18 @@
 
 class Kangaroo : public Animal {
    private:
-    /* data */
+    static int totalKangaroos;
+    std::string name;
+
    public:
-    Kangaroo(/* args */);
-    ~Kangaroo();
+    Kangaroo() { totalKangaroos++; };
+    ~Kangaroo() { totalKangaroos--; };
+    virtual Kangaroo* clone() const = 0;
+    virtual void setName(std::string newName) = 0;
+    static int getCount() { return totalKangaroos; };
+
+    // friend insertion operator
+    friend std::ostream& operator<<(std::ostream& out, const Kangaroo& a);
 };
-
-Kangaroo::Kangaroo(/* args */) {
-}
-
-Kangaroo::~Kangaroo() {
-}
 
 #endif

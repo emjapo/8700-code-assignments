@@ -5,16 +5,18 @@
 
 class Serpent : public Animal {
    private:
-    /* data */
+    static int totalSerpents;
+    std::string name;
+
    public:
-    Serpent(/* args */);
-    ~Serpent();
+    Serpent() { totalSerpents++; };
+    ~Serpent() { totalSerpents--; };
+    virtual Serpent* clone() const = 0;
+    virtual void setName(std::string newName) = 0;
+    static int getCount() { return totalSerpents; };
+
+    // friend insertion operator
+    friend std::ostream& operator<<(std::ostream& out, const Serpent& a);
 };
-
-Serpent::Serpent(/* args */) {
-}
-
-Serpent::~Serpent() {
-}
 
 #endif

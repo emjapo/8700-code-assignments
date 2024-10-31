@@ -3,16 +3,12 @@
 
 class Zoo {
    private:
-    /* data */
-   public:
     Zoo(/* args */);
-    ~Zoo();
+    static Zoo* instance;
+   public:
+    static Zoo* Instance();
 };
 
-Zoo::Zoo(/* args */) {
-}
 
-Zoo::~Zoo() {
-}
 
 #endif
