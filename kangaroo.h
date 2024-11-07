@@ -9,10 +9,10 @@ class Kangaroo : public Animal {
     std::string name;
 
    public:
-    Kangaroo() { totalKangaroos++; };
-    ~Kangaroo() { totalKangaroos--; };
-    virtual Kangaroo* clone() const = 0;
-    virtual void setName(std::string newName) = 0;
+    Kangaroo();
+    ~Kangaroo();
+    Kangaroo* clone() const;
+    void setName(std::string newName);
     static int getCount() { return totalKangaroos; };
 
     // friend insertion operator
