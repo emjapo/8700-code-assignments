@@ -5,20 +5,21 @@
 class Animal {
    private:
     std::string name;
+    virtual void speak( std::ostream& out) const = 0;
 
    public:
     // virtual ~Animal() { totalAnimals--; };
     virtual Animal* clone() const = 0;
     virtual void setName(std::string newName) = 0;
-    static int totalAnimals;
-    // static int getAnimalCount();
+    virtual std::string getName() = 0;
+    virtual int getCount() = 0;
 
-    // friend insertion operator
-    // not sure this will need to stay since this is kinda an abstract class
-    // friend std::ostream& operator<<(std::ostream& out, const Animal& a) {
-    //     out << "There are " << totalAnimals << " in the zoo.\n";
-    //     return out;
-    // };
+    /// std stream interface
+    friend std::ostream& operator<<( std::ostream& out, const Animal& b )
+    {
+        b.speak( out );
+        return out;
+    }
 };
 
 #endif

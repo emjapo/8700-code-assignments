@@ -9,8 +9,35 @@ std::ostream& operator<<(std::ostream& out, const Wolf& a) {
     return out;
 };
 
-// Wolf::Wolf(/* args */) {
-// }
 
-// Wolf::~Wolf() {
-// }
+Wolf::Wolf(/* args */) {
+    totalWolfs++;
+    // totalAnimals++;
+}
+
+Wolf::Wolf(std::string name) : name(name) {
+    totalWolfs++;
+    // totalAnimals++;
+}
+
+Wolf::~Wolf() {
+    totalWolfs--;
+    // totalAnimals--;
+}
+
+Wolf* Wolf::clone() const {
+    std::cout << "needs to be implemented\n";
+    return new Wolf;
+};
+
+void Wolf::setName(std::string newName){
+    name = newName;
+};
+
+std::string Wolf::getName() {
+    return name;
+}
+
+void Wolf::speak( std::ostream& out) const {
+    std::cout << "need to implement\n";
+};

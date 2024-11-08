@@ -5,18 +5,24 @@
 int Kangaroo::totalKangaroos = 0;
 
 std::ostream& operator<<(std::ostream& out, const Kangaroo& a) {
-    out << "There are " << a.totalAnimals << " in the zoo.\n";
+    out << "There are " << a.totalKangaroos << " in the zoo.\n";
     return out;
 };
 
+
 Kangaroo::Kangaroo(/* args */) {
     totalKangaroos++;
-    totalAnimals++;
+    // totalAnimals++;
+}
+
+Kangaroo::Kangaroo(std::string name) : name(name) {
+    totalKangaroos++;
+    // totalAnimals++;
 }
 
 Kangaroo::~Kangaroo() {
     totalKangaroos--;
-    totalAnimals--;
+    // totalAnimals--;
 }
 
 Kangaroo* Kangaroo::clone() const {
@@ -26,4 +32,12 @@ Kangaroo* Kangaroo::clone() const {
 
 void Kangaroo::setName(std::string newName){
     name = newName;
+};
+
+std::string Kangaroo::getName() {
+    return name;
+}
+
+void Kangaroo::speak( std::ostream& out) const {
+    std::cout << "need to implement\n";
 };

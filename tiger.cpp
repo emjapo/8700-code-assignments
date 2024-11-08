@@ -9,8 +9,35 @@ std::ostream& operator<<(std::ostream& out, const Tiger& a) {
     return out;
 };
 
-// Tiger::Tiger(/* args */) {
-// }
 
-// Tiger::~Tiger() {
-// }
+Tiger::Tiger(/* args */) {
+    totalTigers++;
+    // totalAnimals++;
+}
+
+Tiger::Tiger(std::string name) : name(name) {
+    totalTigers++;
+    // totalAnimals++;
+}
+
+Tiger::~Tiger() {
+    totalTigers--;
+    // totalAnimals--;
+}
+
+Tiger* Tiger::clone() const {
+    std::cout << "needs to be implemented\n";
+    return new Tiger;
+};
+
+void Tiger::setName(std::string newName){
+    name = newName;
+};
+
+std::string Tiger::getName() {
+    return name;
+}
+
+void Tiger::speak( std::ostream& out) const {
+    std::cout << "need to implement\n";
+};

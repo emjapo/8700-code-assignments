@@ -9,15 +9,18 @@ class Lemur : public Animal {
     std::string name;
 
    public:
-    Lemur() { totalLemurs++; };
-    ~Lemur() { totalLemurs--; };
-    virtual Lemur* clone() const = 0;
-    virtual void setName(std::string newName) = 0;
-    static int getCount() { return totalLemurs; };
+    Lemur();
+    Lemur(std::string name);
+    ~Lemur();
+    Lemur* clone() const override;
+    void setName(std::string newName) override;
+    std::string getName() override;
+    int getCount() override { return totalLemurs; };
+
+    void speak(std::ostream& out) const;
 
     // friend insertion operator
     friend std::ostream& operator<<(std::ostream& out, const Lemur& a);
 };
-
 
 #endif

@@ -9,11 +9,15 @@ class Tiger : public Animal {
     std::string name;
 
    public:
-    Tiger() { totalTigers++; };
-    ~Tiger() { totalTigers--; };
-    virtual Tiger* clone() const = 0;
-    virtual void setName(std::string newName) = 0;
-    static int getCount() { return totalTigers; };
+    Tiger();
+    Tiger(std::string name);
+    ~Tiger();
+    Tiger* clone() const override;
+    void setName(std::string newName) override;
+    std::string getName() override;
+    int getCount() override { return totalTigers; };
+
+    void speak(std::ostream& out) const;
 
     // friend insertion operator
     friend std::ostream& operator<<(std::ostream& out, const Tiger& a);

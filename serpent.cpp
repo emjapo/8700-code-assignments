@@ -9,8 +9,35 @@ std::ostream& operator<<(std::ostream& out, const Serpent& a) {
     return out;
 };
 
-// Serpent::Serpent(/* args */) {
-// }
 
-// Serpent::~Serpent() {
-// }
+Serpent::Serpent(/* args */) {
+    totalSerpents++;
+    // totalAnimals++;
+}
+
+Serpent::Serpent(std::string name) : name(name) {
+    totalSerpents++;
+    // totalAnimals++;
+}
+
+Serpent::~Serpent() {
+    totalSerpents--;
+    // totalAnimals--;
+}
+
+Serpent* Serpent::clone() const {
+    std::cout << "needs to be implemented\n";
+    return new Serpent;
+};
+
+void Serpent::setName(std::string newName){
+    name = newName;
+};
+
+std::string Serpent::getName() {
+    return name;
+}
+
+void Serpent::speak( std::ostream& out) const {
+    std::cout << "need to implement\n";
+};

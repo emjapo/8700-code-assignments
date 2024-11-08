@@ -10,10 +10,14 @@ class Kangaroo : public Animal {
 
    public:
     Kangaroo();
+    Kangaroo(std::string name);
     ~Kangaroo();
-    Kangaroo* clone() const;
-    void setName(std::string newName);
-    static int getCount() { return totalKangaroos; };
+    Kangaroo* clone() const override;
+    void setName(std::string newName) override;
+    std::string getName() override;
+    int getCount() override { return totalKangaroos; };
+
+    void speak( std::ostream& out) const;
 
     // friend insertion operator
     friend std::ostream& operator<<(std::ostream& out, const Kangaroo& a);

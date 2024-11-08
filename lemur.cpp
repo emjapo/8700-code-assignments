@@ -9,8 +9,35 @@ std::ostream& operator<<(std::ostream& out, const Lemur& a) {
     return out;
 };
 
-// Lemur::Lemur(/* args */) {
-// }
 
-// Lemur::~Lemur() {
-// }
+Lemur::Lemur(/* args */) {
+    totalLemurs++;
+    // totalAnimals++;
+}
+
+Lemur::Lemur(std::string name) : name(name) {
+    totalLemurs++;
+    // totalAnimals++;
+}
+
+Lemur::~Lemur() {
+    totalLemurs--;
+    // totalAnimals--;
+}
+
+Lemur* Lemur::clone() const {
+    std::cout << "needs to be implemented\n";
+    return new Lemur;
+};
+
+void Lemur::setName(std::string newName){
+    name = newName;
+};
+
+std::string Lemur::getName() {
+    return name;
+}
+
+void Lemur::speak( std::ostream& out) const {
+    std::cout << "need to implement\n";
+};

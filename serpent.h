@@ -9,14 +9,17 @@ class Serpent : public Animal {
     std::string name;
 
    public:
-    Serpent() { totalSerpents++; };
-    ~Serpent() { totalSerpents--; };
-    virtual Serpent* clone() const = 0;
-    virtual void setName(std::string newName) = 0;
-    static int getCount() { return totalSerpents; };
+    Serpent();
+    Serpent(std::string name);
+    ~Serpent();
+    Serpent* clone() const override;
+    void setName(std::string newName) override;
+    std::string getName() override;
+    int getCount() override { return totalSerpents; };
+
+    void speak(std::ostream& out) const;
 
     // friend insertion operator
     friend std::ostream& operator<<(std::ostream& out, const Serpent& a);
 };
-
 #endif
