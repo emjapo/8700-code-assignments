@@ -13,6 +13,7 @@ class Animal {
     virtual void setName(std::string newName) = 0;
     virtual std::string getName() = 0;
     virtual int getCount() = 0;
+    virtual std::string getType() = 0;
 
     /// std stream interface
     friend std::ostream& operator<<( std::ostream& out, const Animal& b )

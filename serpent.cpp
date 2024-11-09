@@ -38,6 +38,10 @@ std::string Serpent::getName() {
     return name;
 }
 
+std::string Serpent::getType() {
+    return "serpent";
+}
+
 void Serpent::speak(std::ostream& out) const {
     out << "Hi, I am a serpent, my name is " << name << ", I hiss, and I eat rodents.\n";;
 }

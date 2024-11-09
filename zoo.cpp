@@ -44,7 +44,6 @@ void Zoo::animalFactory(std::string type, std::string animalName) {
 };
 
 void Zoo::addAnimal(std::unique_ptr<Animal> newAnimal) {
-
     animals.push_back(std::move(newAnimal));
 };
 
@@ -57,7 +56,20 @@ Animal& Zoo::lastAnimal() {
 }
 
 void Zoo::rollCall() {
+    std::cout << "There are " << animals.size() << " animals in the zoo.\n\n";
+
+    const std::type_info* currentType = nullptr;  // Initialize to nullptr
+
+    if (animals.size() > 0) {
+        currentType = &typeid(*animals[0]);
+        std::cout << "\nThere are " << animals[0]->getCount() << " " << animals[0]->getType() << "s.\n";
+    }
+
     for (int i = 0; i < animals.size(); i++) {
+        if (currentType == nullptr || *currentType != typeid(*animals[i])) {
+            currentType = &typeid(*animals[i]);
+            std::cout << "\nThere are " << animals[i]->getCount() << " " << animals[i]->getType() << "(s).\n";
+        }
         std::cout << *animals[i];
     }
 };

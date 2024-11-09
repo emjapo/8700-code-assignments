@@ -38,6 +38,10 @@ std::string Wolf::getName() {
     return name;
 }
 
+std::string Wolf::getType() {
+    return "wolf";
+}
+
 void Wolf::speak(std::ostream& out) const {
     out << "Hi, I am a wolf, my name is " << name << ", I howl, and I eat meat\n";
 }

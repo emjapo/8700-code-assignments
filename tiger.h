@@ -16,6 +16,7 @@ class Tiger : public Animal {
     void setName(std::string newName) override;
     std::string getName() override;
     int getCount() override { return totalTigers; };
+    std::string getType() override;
 
     void speak( std::ostream& out) const override;
 

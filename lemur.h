@@ -16,6 +16,7 @@ class Lemur : public Animal {
     void setName(std::string newName) override;
     std::string getName() override;
     int getCount() override { return totalLemurs; };
+    std::string getType() override;
 
     void speak( std::ostream& out) const override;
 

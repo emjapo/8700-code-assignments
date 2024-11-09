@@ -38,6 +38,10 @@ std::string Lemur::getName() {
     return name;
 }
 
+std::string Lemur::getType() {
+    return "lemur";
+}
+
 void Lemur::speak(std::ostream& out) const {
     out << "Hi, I am a lemur, my name is " << name << ", I click, and I eat fruit.\n";
 }

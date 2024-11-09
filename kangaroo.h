@@ -16,6 +16,7 @@ class Kangaroo : public Animal {
     void setName(std::string newName) override;
     std::string getName() override;
     int getCount() override { return totalKangaroos; };
+    std::string getType() override;
 
     void speak( std::ostream& out) const override;
 
