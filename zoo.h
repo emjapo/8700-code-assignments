@@ -22,6 +22,8 @@ class Zoo {
     static Zoo* Instance();
 
     void animalFactory(std::string type, std::string animalName);
+    void addAnimal(std::unique_ptr<Animal> newAnimal);
+    Animal& lastAnimal();
     void rollCall();
     std::string getName();
     void setName(std::string newName);
