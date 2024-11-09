@@ -9,7 +9,7 @@ class Animal {
 
    public:
     // virtual ~Animal() { totalAnimals--; };
-    virtual Animal* clone() const = 0;
+    virtual Animal* clone(std::string newName) const = 0;
     virtual void setName(std::string newName) = 0;
     virtual std::string getName() = 0;
     virtual int getCount() = 0;

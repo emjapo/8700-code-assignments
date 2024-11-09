@@ -25,9 +25,9 @@ Tiger::~Tiger() {
     // totalAnimals--;
 }
 
-Tiger* Tiger::clone() const {
-    std::cout << "needs to be implemented\n";
-    return new Tiger;
+Animal* Tiger::clone(std::string newName) const {
+    std::cout << "Tiger "<<name <<" was cloned, and his clone is named "<< newName <<".\n";
+    return new Tiger(newName);
 };
 
 void Tiger::setName(std::string newName) {

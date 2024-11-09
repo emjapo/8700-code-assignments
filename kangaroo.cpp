@@ -25,9 +25,9 @@ Kangaroo::~Kangaroo() {
     // totalAnimals--;
 }
 
-Kangaroo* Kangaroo::clone() const {
-    std::cout << "needs to be implemented\n";
-    return new Kangaroo;
+Animal* Kangaroo::clone(std::string newName) const {
+    std::cout << "Kangaroo "<<name <<" was cloned, and his clone is named "<< newName <<".\n";
+    return new Kangaroo(newName);
 };
 
 void Kangaroo::setName(std::string newName) {

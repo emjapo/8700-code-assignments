@@ -12,7 +12,7 @@ class Wolf : public Animal {
     Wolf();
     Wolf(std::string name);
     ~Wolf();
-    Wolf* clone() const override;
+    Animal* clone(std::string newName) const override;
     void setName(std::string newName) override;
     std::string getName() override;
     int getCount() override { return totalWolfs; };

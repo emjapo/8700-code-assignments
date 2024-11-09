@@ -32,6 +32,11 @@ int main() {
         myZoo->animalFactory(animalType, animalNames.back());
         animalNames.pop_back();
 
+        // clone the other animals we need
+        if (number > 1) {
+            
+        }
+
         std::cout << animalType << ": " << number << "\n";
 
     }

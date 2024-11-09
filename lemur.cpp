@@ -25,9 +25,9 @@ Lemur::~Lemur() {
     // totalAnimals--;
 }
 
-Lemur* Lemur::clone() const {
-    std::cout << "needs to be implemented\n";
-    return new Lemur;
+Animal* Lemur::clone(std::string newName) const {
+    std::cout << "Lemur "<<name <<" was cloned, and his clone is named "<< newName <<".\n";
+    return new Lemur(newName);
 };
 
 void Lemur::setName(std::string newName) {

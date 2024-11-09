@@ -25,9 +25,9 @@ Serpent::~Serpent() {
     // totalAnimals--;
 }
 
-Serpent* Serpent::clone() const {
-    std::cout << "needs to be implemented\n";
-    return new Serpent;
+Animal* Serpent::clone(std::string newName) const {
+    std::cout << "Serpent "<<name <<" was cloned, and his clone is named "<< newName <<".\n";
+    return new Serpent(newName);
 };
 
 void Serpent::setName(std::string newName) {

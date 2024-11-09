@@ -12,7 +12,7 @@ class Tiger : public Animal {
     Tiger();
     Tiger(std::string name);
     ~Tiger();
-    Tiger* clone() const override;
+    Animal* clone(std::string newName) const override;
     void setName(std::string newName) override;
     std::string getName() override;
     int getCount() override { return totalTigers; };

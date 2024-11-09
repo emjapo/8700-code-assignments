@@ -12,7 +12,7 @@ class Lemur : public Animal {
     Lemur();
     Lemur(std::string name);
     ~Lemur();
-    Lemur* clone() const override;
+    Animal* clone(std::string newName) const override;
     void setName(std::string newName) override;
     std::string getName() override;
     int getCount() override { return totalLemurs; };

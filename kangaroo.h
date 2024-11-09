@@ -12,7 +12,7 @@ class Kangaroo : public Animal {
     Kangaroo();
     Kangaroo(std::string name);
     ~Kangaroo();
-    Kangaroo* clone() const override;
+    Animal* clone(std::string newName) const override;
     void setName(std::string newName) override;
     std::string getName() override;
     int getCount() override { return totalKangaroos; };
