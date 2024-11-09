@@ -3,7 +3,7 @@ CXX := g++
 CXXFLAGS := -Wall -Wextra -std=c++17
 
 # Output executable
-TARGET := zooKeeper
+TARGET := zoo
 
 # Source files and object files
 SRCS := $(wildcard *.cpp)

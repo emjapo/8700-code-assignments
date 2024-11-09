@@ -1,4 +1,5 @@
 #include "wolf.h"
+
 #include <iostream>
 
 // define the static count
@@ -8,7 +9,6 @@ std::ostream& operator<<(std::ostream& out, const Wolf& a) {
     out << "There are " << a.totalWolfs << " in the zoo.\n";
     return out;
 };
-
 
 Wolf::Wolf(/* args */) {
     totalWolfs++;
@@ -30,7 +30,7 @@ Wolf* Wolf::clone() const {
     return new Wolf;
 };
 
-void Wolf::setName(std::string newName){
+void Wolf::setName(std::string newName) {
     name = newName;
 };
 
@@ -38,6 +38,6 @@ std::string Wolf::getName() {
     return name;
 }
 
-void Wolf::speak( std::ostream& out) const {
-    std::cout << "need to implement\n";
-};
+void Wolf::speak(std::ostream& out) const {
+    out << "Hi, I am a wolf, my name is " << name << ", I howl, and I eat meat\n";
+}

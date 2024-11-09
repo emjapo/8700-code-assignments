@@ -1,4 +1,5 @@
 #include "kangaroo.h"
+
 #include <iostream>
 
 // define the static count
@@ -8,7 +9,6 @@ std::ostream& operator<<(std::ostream& out, const Kangaroo& a) {
     out << "There are " << a.totalKangaroos << " in the zoo.\n";
     return out;
 };
-
 
 Kangaroo::Kangaroo(/* args */) {
     totalKangaroos++;
@@ -30,7 +30,7 @@ Kangaroo* Kangaroo::clone() const {
     return new Kangaroo;
 };
 
-void Kangaroo::setName(std::string newName){
+void Kangaroo::setName(std::string newName) {
     name = newName;
 };
 
@@ -38,6 +38,6 @@ std::string Kangaroo::getName() {
     return name;
 }
 
-void Kangaroo::speak( std::ostream& out) const {
-    std::cout << "need to implement\n";
-};
+void Kangaroo::speak(std::ostream& out) const {
+    out << "Hi, I am a kangaroo, my name is " << name << ", I grunt, and I eat grass.\n";
+}

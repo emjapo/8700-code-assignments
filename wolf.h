@@ -17,7 +17,7 @@ class Wolf : public Animal {
     std::string getName() override;
     int getCount() override { return totalWolfs; };
 
-    void speak(std::ostream& out) const;
+    void speak( std::ostream& out) const override;
 
     // friend insertion operator
     friend std::ostream& operator<<(std::ostream& out, const Wolf& a);

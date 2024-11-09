@@ -45,7 +45,7 @@ void Zoo::animalFactory(std::string type, std::string animalName){
 
 void Zoo::rollCall() {
     for (int i = 0; i < animals.size(); i++) {
-        std::cout << &animals[i];
+        std::cout << *animals[i];
     }
 
 };

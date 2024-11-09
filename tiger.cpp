@@ -1,4 +1,5 @@
 #include "tiger.h"
+
 #include <iostream>
 
 // define the static count
@@ -8,7 +9,6 @@ std::ostream& operator<<(std::ostream& out, const Tiger& a) {
     out << "There are " << a.totalTigers << " in the zoo.\n";
     return out;
 };
-
 
 Tiger::Tiger(/* args */) {
     totalTigers++;
@@ -30,7 +30,7 @@ Tiger* Tiger::clone() const {
     return new Tiger;
 };
 
-void Tiger::setName(std::string newName){
+void Tiger::setName(std::string newName) {
     name = newName;
 };
 
@@ -38,6 +38,6 @@ std::string Tiger::getName() {
     return name;
 }
 
-void Tiger::speak( std::ostream& out) const {
-    std::cout << "need to implement\n";
-};
+void Tiger::speak(std::ostream& out) const {
+    out << "Hi, I am a tiger, my name is " << name << ", I roar, and I eat meat.\n";
+}
