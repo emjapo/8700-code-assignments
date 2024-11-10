@@ -18,9 +18,11 @@ class Zoo {
     static Zoo* instance;
     std::vector<std::unique_ptr<Animal>> animals;
     std::string name;
+    static int animalCount;
 
    public:
     static Zoo* Instance();
+    static int totalAnimals();
 
     void animalFactory(std::string type, std::string animalName);
     void addAnimal(std::unique_ptr<Animal> newAnimal);

@@ -61,5 +61,9 @@ int main() {
     // get the animals to tell everything about themselves
     myZoo->rollCall();
 
+    std::cout << "\nThat is all of the " << myZoo->totalAnimals() <<" animals at the zoo.\n";
+
+    delete myZoo;
+
     return 0;
 }
