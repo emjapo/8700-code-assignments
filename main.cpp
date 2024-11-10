@@ -20,7 +20,7 @@ int main() {
 
     Zoo* myZoo = Zoo::Instance();
 
-    std::cout << myZoo->getName() << " is the name of the zoo\n";
+    std::cout << myZoo->getName() << " is the name of the zoo\n\n";
 
     std::string line;
     // Read each line from the standard input

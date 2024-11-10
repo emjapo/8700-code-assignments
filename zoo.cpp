@@ -19,23 +19,23 @@ Zoo::Zoo() {
 void Zoo::animalFactory(std::string type, std::string animalName) {
     // make the type lowercase so that way we can account forinput variations
     transform(type.begin(), type.end(), type.begin(), ::tolower);
-    if (type == "kangaroo") {
+    if (type.find("kangaroo") != std::string::npos) {
         // create the animal and add it to the list
         animals.push_back(std::make_unique<Kangaroo>(animalName));
 
-    } else if (type == "lemur") {
+    } else if (type.find("lemur") != std::string::npos) {
         // create the animal and add it to the list
         animals.push_back(std::make_unique<Lemur>(animalName));
 
-    } else if (type == "serpent") {
+    } else if (type.find("serpent") != std::string::npos) {
         // create the animal and add it to the list
         animals.push_back(std::make_unique<Serpent>(animalName));
 
-    } else if (type == "tiger") {
+    } else if (type.find("tiger") != std::string::npos) {
         // create the animal and add it to the list
         animals.push_back(std::make_unique<Tiger>(animalName));
 
-    } else if (type == "wolf") {
+    } else if (type.find("wolf") != std::string::npos) {
         // create the animal and add it to the list
         animals.push_back(std::make_unique<Wolf>(animalName));
 
@@ -66,7 +66,7 @@ void Zoo::rollCall() {
         std::cout << "\nThere are " << animals[0]->getCount() << " " << animals[0]->getType() << "(s).\n";
     }
 
-    for (int i = 0; i < animals.size(); i++) {
+    for (long unsigned int i = 0; i < animals.size(); i++) {
         if (currentType == nullptr || *currentType != typeid(*animals[i])) {
             currentType = &typeid(*animals[i]);
             std::cout << "\nThere are " << animals[i]->getCount() << " " << animals[i]->getType() << "(s).\n";
