@@ -1,3 +1,4 @@
+// Author: Emily Port
 #ifndef KANGAROO_H
 #define KANGAROO_H
 

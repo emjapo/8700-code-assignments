@@ -1,3 +1,4 @@
+// Author: Emily Port
 #ifndef ZOO_H
 #define ZOO_H
 

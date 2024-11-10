@@ -1,3 +1,4 @@
+// Author: Emily Port
 #ifndef LEMUR_H
 #define LEMUR_H
 

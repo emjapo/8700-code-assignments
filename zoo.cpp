@@ -1,3 +1,4 @@
+// Author: Emily Port
 #include "zoo.h"
 
 #include <bits/stdc++.h>
@@ -56,13 +57,13 @@ Animal& Zoo::lastAnimal() {
 }
 
 void Zoo::rollCall() {
-    std::cout << "There are " << animals.size() << " animals in the zoo.\n\n";
+    std::cout << "\nThere are " << animals.size() << " animals in the zoo.\n";
 
     const std::type_info* currentType = nullptr;  // Initialize to nullptr
 
     if (animals.size() > 0) {
         currentType = &typeid(*animals[0]);
-        std::cout << "\nThere are " << animals[0]->getCount() << " " << animals[0]->getType() << "s.\n";
+        std::cout << "\nThere are " << animals[0]->getCount() << " " << animals[0]->getType() << "(s).\n";
     }
 
     for (int i = 0; i < animals.size(); i++) {

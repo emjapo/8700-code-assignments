@@ -1,3 +1,4 @@
+// Author: Emily Port
 #include "serpent.h"
 
 #include <iostream>
@@ -26,7 +27,7 @@ Serpent::~Serpent() {
 }
 
 Animal* Serpent::clone(std::string newName) const {
-    std::cout << "Serpent "<<name <<" was cloned, and his clone is named "<< newName <<".\n";
+    std::cout << "Serpent "<<name <<" was cloned, and their clone is named "<< newName <<".\n";
     return new Serpent(newName);
 };
 

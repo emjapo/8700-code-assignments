@@ -1,3 +1,4 @@
+// Author: Emily Port
 #ifndef TIGER_H
 #define TIGER_H
 

@@ -1,3 +1,4 @@
+// Author: Emily Port
 #include "kangaroo.h"
 
 #include <iostream>
@@ -26,7 +27,7 @@ Kangaroo::~Kangaroo() {
 }
 
 Animal* Kangaroo::clone(std::string newName) const {
-    std::cout << "Kangaroo "<<name <<" was cloned, and his clone is named "<< newName <<".\n";
+    std::cout << "Kangaroo "<<name <<" was cloned, and their clone is named "<< newName <<".\n";
     return new Kangaroo(newName);
 };
 

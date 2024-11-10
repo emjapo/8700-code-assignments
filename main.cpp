@@ -1,9 +1,18 @@
+// Author: Emily Port
 #include <iostream>
 #include <sstream>
 #include <string>
 #include <vector>
 
 #include "zoo.h"
+
+/*
+This program encapsulates most of the logic in the singleton class, Zoo. Animal is the abstract interface that the other animal classes inherit from.
+The Zoo class has a Factory function that allows for animals to be created. These animals are added to a vector in the zoo since in real life you would
+have to be in the zoo to see the animals. If there are more than one of the animals of a type needed, the rest of the animals of that type are cloned
+using the clone function for that class. Then to get all of the info from the animals, the zoo does a roll call using the overloaded << operator to print
+the information about each animal.
+*/
 
 int main() {
     // create vector of animal names that can be used to put in to animal constructors
@@ -47,7 +56,6 @@ int main() {
                 std::cerr << e.what() << std::endl;
             }
         }
-
     }
 
     // get the animals to tell everything about themselves

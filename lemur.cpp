@@ -1,3 +1,4 @@
+// Author: Emily Port
 #include "lemur.h"
 
 #include <iostream>
@@ -26,7 +27,7 @@ Lemur::~Lemur() {
 }
 
 Animal* Lemur::clone(std::string newName) const {
-    std::cout << "Lemur "<<name <<" was cloned, and his clone is named "<< newName <<".\n";
+    std::cout << "Lemur "<<name <<" was cloned, and their clone is named "<< newName <<".\n";
     return new Lemur(newName);
 };
 

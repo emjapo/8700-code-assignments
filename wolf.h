@@ -1,3 +1,4 @@
+// Author: Emily Port
 #ifndef WOLF_H
 #define WOLF_H
 
