@@ -8,4 +8,19 @@ myCar = Car()
 myEV = EV()
 
 myCar.print()
-myEV.print()
+
+myCar.setColor("white")
+myCar.setModel("Corolla")
+myCar.setSpeed(7)
+
+myCar.decelerate()
+
+for x in range(6):
+    myCar.accelerate()
+
+myCar.decelerate()
+
+myCar.print()
+
+print(f"There are a total of {Car.getNumCars()} car(s).")
+
