@@ -1,5 +1,6 @@
 from vehicle import Vehicle
 
+
 class Car(Vehicle):
     # static count of how many cars there are
     numCars = 0
@@ -13,15 +14,16 @@ class Car(Vehicle):
         self.color = "Default"
         print("Car created!")
 
+    # methods from UML diagram
     def getSpeed(self):
         return self.speed
-    
+
     def getModel(self):
         return self.model
-    
+
     def getColor(self):
         return self.color
-    
+
     def setSpeed(self, newSpeed):
         self.speed = newSpeed
 
@@ -47,5 +49,6 @@ class Car(Vehicle):
         self.speed += 10
         print(f"Speeding up! The car is now going {self.speed} mph.")
 
+    # static method to get the static variable
     def getNumCars():
         return Car.numCars
