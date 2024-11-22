@@ -6,7 +6,7 @@ class Car(Vehicle):
     numCars = 0
 
     # default constructor
-    def __init__(self):
+    def __init__(self): #python limits to one constructor so only the default was used as per directions from email
         # add to car count
         Car.numCars += 1
         self.speed = 0

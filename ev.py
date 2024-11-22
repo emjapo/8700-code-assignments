@@ -2,18 +2,20 @@ from car import Car
 
 
 class EV(Car):
-    def __init__(self):
+    def __init__(self): #python limits to one constructor so only the default was used as per directions from email
         super().__init__()
         self.range = 0.0
         self.gen = 1
         print("EV created!")
 
+    # getters specific to the EV class
     def getRange(self):
         return self.range
 
     def getGen(self):
         return self.gen
 
+    # setters specific to the EV class
     def setRange(self, newRange):
         self.range = newRange
 
